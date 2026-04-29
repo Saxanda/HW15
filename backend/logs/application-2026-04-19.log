@@ -1,0 +1,6 @@
+{"body":{"authorId":1,"createDate":"2026-04-18T20:56:20.746Z","deleted":false,"header":"My second post","id":8,"text":"This is a test post"},"level":"info","message":"Incoming request","method":"POST","timestamp":"2026-04-19T08:51:15.636Z","url":"/api/posts"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2026-04-19T09:25:13.014Z","url":"/auth/login"}
+{"body":{"email":"testuser@yopmail.com","password":"qwe123"},"level":"info","message":"Incoming request","method":"POST","timestamp":"2026-04-19T09:26:38.942Z","url":"/auth/login"}
+{"level":"info","message":"Incoming request","method":"POST","timestamp":"2026-04-19T09:28:20.636Z","url":"/auth/login"}
+{"level":"info","message":"Incoming request","method":"POST","timestamp":"2026-04-19T09:29:23.531Z","url":"/auth/login"}
+{"body":{"confirmPassword":"qwe123","email":"testuser@yopmail.com","password":"qwe123"},"level":"info","message":"Incoming request","method":"POST","timestamp":"2026-04-19T09:29:53.219Z","url":"/auth/register"}

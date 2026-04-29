@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/mnt/d/repository/ND7HW/HomeWork15/backend/logs/.bb2c2ae76be089ff2519589bfba084d7495eccaa-audit.json",
+    "files": [
+        {
+            "date": 1776878240759,
+            "name": "/mnt/d/repository/ND7HW/HomeWork15/backend/logs/application-2026-04-22.log",
+            "hash": "f2281b79b0639d0497ee9c868f3a08ea670e505f6f95a692f743dc6fa8072e70"
+        },
+        {
+            "date": 1777407946235,
+            "name": "/mnt/d/repository/ND7HW/HomeWork15/backend/logs/application-2026-04-28.log",
+            "hash": "2ddc45d5f025aca985d5f093c6423aeb977da3acd493590696fc9417170625f6"
+        },
+        {
+            "date": 1777450616349,
+            "name": "/mnt/d/repository/ND7HW/HomeWork15/backend/logs/application-2026-04-29.log",
+            "hash": "4627214a4ecd66d0c88176774aa75b547280306a9e334f6172dad605ebc7fe5c"
+        }
+    ],
+    "hashType": "sha256"
+}

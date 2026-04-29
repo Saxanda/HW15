@@ -1,0 +1,2 @@
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2026-04-28T20:27:33.224Z","url":"/api/posts?page=0&size=5"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2026-04-28T21:21:14.714Z","url":"/api/posts?page=0&size=5"}

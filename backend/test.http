@@ -1,0 +1,106 @@
+### Base URL
+@baseUrl = http://localhost:8000
+
+### =========================
+### 1. REGISTER
+### =========================
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "testuser@yopmail.com",
+  "password": "qwe123",
+  "confirmPassword": "qwe123"
+}
+
+### =========================
+### 2. LOGIN
+### =========================
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@yopmail.com",
+  "password": "qwe123"
+}
+
+> {%
+    // Save token automatically
+    client.global.set("token", response.body.token);
+%}
+### TO TEST BEHAVIOUR
+POST {{baseUrl}}/auth/login
+### =========================
+### 3. GET CURRENT USER (AUTHORIZED)
+### =========================
+GET {{baseUrl}}/users
+Authorization: {{token}}
+
+### =========================
+### 4. GET CURRENT USER (UNAUTHORIZED - should be 401)
+### =========================
+GET {{baseUrl}}/users
+
+### =========================
+### 5. CREATE NEWS POST
+### =========================
+POST {{baseUrl}}/api/posts
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "id": 8,
+  "header": "My second post",
+  "text": "This is a test post",
+  "createDate": "2026-04-18T20:56:20.746Z",
+  "authorId": 1,
+  "deleted": false
+}
+
+### =========================
+### 5.1. CREATE NEWS POST
+### =========================
+POST {{baseUrl}}/api/posts
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+
+    "header": "My first post",
+    "text": "This is a test post"
+}
+
+
+### =========================
+### 6. GET ALL POSTS
+### =========================
+GET {{baseUrl}}/api/posts?page=0&size=10
+Authorization: {{token}}
+
+### =========================
+### 7. GET POST BY ID
+### =========================
+GET {{baseUrl}}/api/posts/1
+Authorization: {{token}}
+
+### =========================
+### 8. UPDATE POST
+### =========================
+PUT {{baseUrl}}/api/posts/1
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "title": "Updated title"
+}
+
+### =========================
+### 9. DELETE POST
+### =========================
+DELETE {{baseUrl}}/api/posts/1
+Authorization: {{token}}
+
+### =========================
+### 10. UNAUTHORIZED ACCESS (should be 401)
+### =========================
+GET {{baseUrl}}/api/posts?page=0&size=10
